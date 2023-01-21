@@ -7,33 +7,27 @@
             "https+local://8.8.8.8/dns-query"
         ]
     },
-    "inbounds": [
-        {
-            "port": 8080,
-            "protocol": "trojan",
-            "settings": {
-                "clients": [
-                    {
-                        "password": "123"
-                    }
-                ]
-            },
-            "streamSettings": {
-                "network": "ws",
-                "wsSettings": {
-                    "path": "qwe"
-                }
-            },
-            "sniffing": {
-                "enabled": true,
-                "destOverride": [
-                    "http",
-                    "tls",
-                    "quic"
-                ]
-            }
+      "inbounds": [
+    {
+      "port": 8080,
+      "listen":"0.0.0.0",
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "af41686b-cb85-494a-a554-eeaa1514bca7",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+        "path": "/qwe"
         }
-    ],
+      }
+    }
+  ],
     "outbounds": [
         {
             "protocol": "freedom",
